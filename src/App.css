@@ -4,7 +4,5 @@
 
 .main {
   background-color: #111111;
-  justify-content: space-evenly;
   color: white;
-  flex-wrap: wrap;
 }
