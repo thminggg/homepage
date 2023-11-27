@@ -2,41 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-.app {
-  text-align: center;
-}
-
-.app-logo {
-  height: 10vmin;
-  width: auto;
-}
-
-@keyframes app-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .app-logo {
-    animation: app-logo-spin infinite 20s linear;
-  }
-}
-
 .main {
   background-color: #111111;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: row;
   justify-content: space-evenly;
-  align-items: center;
-  font-size: calc(10px + 2vmin);
   color: white;
-  padding-left: 3em;
-  padding-right: 3em;
-  gap: 1em;
   flex-wrap: wrap;
 }

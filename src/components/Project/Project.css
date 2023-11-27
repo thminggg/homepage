@@ -1,10 +1,4 @@
 .projects {
-
-  background-color: #1E1E1F;
-  border: 3px #1E1E1F solid;
-  border-radius: 15px;
-  padding: 1em;
-  height: 70vh;
-  flex-grow: 8;
-  text-align: center;
+  background-color: #1e1e1f;
+  border: 3px #1e1e1f solid;
 }

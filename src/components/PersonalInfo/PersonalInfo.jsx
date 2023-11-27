@@ -1,29 +1,82 @@
 import "./PersonalInfo.css";
-import logo from "./logo.png";
 import Separator from "../Separator/Separator";
+import { MdEmail } from "react-icons/md";
+import { SlLocationPin } from "react-icons/sl";
+import { FaRegFileCode } from "react-icons/fa6";
+
+const infos = [
+  {
+    icon: <MdEmail size={33} />,
+    title: "Email",
+    content: "patrick.hm.tse@gmail.com",
+  },
+  {
+    icon: <SlLocationPin size={33} />,
+    title: "Location",
+    content: "Vancouver, Canada",
+  },
+];
+
+const stacks = [
+  {
+    title: "Language",
+    content: `Javascript, Typescript, Python, Java, Bash, PowerShell`,
+  },
+  { title: "Frontend", content: `ReactJS, NextJS, Redux, TailwindCSS` },
+  {
+    title: "Backend",
+    content: `NodeJS, ExpressJS, OracleSQL, DynamoDB, Kafka, Databricks, Redis`,
+  },
+  {
+    title: "Testing",
+    content: `: Jest, Cypress,Postman, Cucumber, JMeter, Charles Proxy`,
+  },
+  {
+    title: "DevOps",
+    content: `Azure, K8S, Docker, Kustomize, Kibana, Jenkins, Liquibase, Webpack`,
+  },
+  {
+    title: "Tools",
+    content: `Confluence, JIRA, Swagger`,
+  },
+];
 
 export default function PersonalInfo() {
   return (
-    <div className="summary">
-      <div className="propic-card">
-        <img src={logo} alt="profile" className="propic" />
+    <div className="summary flex flex-col max-lg:w-full w-4/12 rounded-xl p-3">
+      <div className="propic-card flex justify-center p-6 mb-6 rounded-lg">
+        <img src="sticker.webp" alt="profile" className="h-52" />
       </div>
-      <p className="name">Patrick HM Tse</p>
-      <div className="title">Software Engineer</div>
+      <p className="text-2xl font-bold m-2 text-center">Patrick HM Tse</p>
+      <p className="text-sm text-center">Software Engineer</p>
       <Separator />
-      <div className="info">
-        <span>
-          <img src={logo} alt="email" className="icon" />
-          <p className="content">Email</p>
-        </span>
-        <span>
-          <img src={logo} alt="phone" className="icon" />
-          <p className="content">Phone</p>
-        </span>
-        <span>
-          <img src={logo} alt="location" className="icon" />
-          <p className="content">Locaiton</p>
-        </span>
+      <div className="flex flex-col gap-4">
+        {infos.map((info, index) => (
+          <div key={index} className="flex items-center gap-6">
+            <div className="m-w-1/12">{info.icon}</div>
+            <div className="flex flex-wrap">
+              <div className="w-full text-xs">{info.title}</div>
+              <div className="w-full font-bold break-all">{info.content}</div>
+            </div>
+          </div>
+        ))}
+        <div className="flex items-center gap-6">
+          <div className="m-w-1/12">
+            <FaRegFileCode size={34} />
+          </div>
+          <div className="flex flex-wrap">
+            <div className="w-full text-xs">Tech Stacks</div>
+            <div className="w-full break-words">
+              {stacks.map((stack, index) => (
+                <div key={index} className="mb-1">
+                  <span className="font-bold">{stack.title}</span>
+                  {`: `}
+                  <span className="text-sm">{stack.content}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

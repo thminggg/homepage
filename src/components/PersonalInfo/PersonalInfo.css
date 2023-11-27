@@ -1,55 +1,8 @@
 .summary {
-  background-color: #1E1E1F;
-  border: 3px #1E1E1F solid;
-  border-radius: 15px;
-  padding: 1em;
-  height: 70vh;
-  text-align: center;
-  flex-grow: 1;
+  background-color: #1e1e1f;
+  border: 3px #1e1e1f solid;
 }
 
 .propic-card {
-  display: flex;
   background-color: #373737;
-  padding: 1em;
-  border-radius: 15px;
-  justify-content: center;
-}
-
-.propic {
-  height: 10vmin;
-  width: auto;
-}
-
-.name {
-  font-weight: 700;
-}
-
-.title {
-  background-color: #373737;
-  padding: 0.5em;
-  margin-top: -1em;
-  border-radius: 15px;
-  font-weight: 500;
-  font-size: x-small;
-}
-
-.info {
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
-}
-
-.icon {
-  max-width: 7vmin;
-  max-height: 7vmin;
-  height: auto;
-  width: auto;
-}
-
-.info span {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
 }
