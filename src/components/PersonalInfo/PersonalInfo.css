@@ -5,4 +5,7 @@
 
 .propic-card {
   background-color: #373737;
+  @media (min-width: 1024px) {
+    margin-top: 2em;
+  }
 }

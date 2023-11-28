@@ -1,0 +1,42 @@
+[
+  {
+    "links": [
+      {
+        "url": "https://www.hangseng.com/en-hk/business/banking-digitally/online-services-beri-whatsapp/",
+        "title": "Hang Seng Bank BERI Chatbot"
+      }
+    ],
+    "title": "WhatsApp AI Chatbot",
+    "highlights": ""
+  },
+  {
+    "links": [
+      {
+        "url": "https://www.sportsync.com/",
+        "title": "Sportsync Web App"
+      }
+    ],
+    "title": "Athlete Scouting Web App",
+    "highlights": ""
+  },
+  {
+    "links": [
+      {
+        "url": "https://www.ufinancehk.co/",
+        "title": "Financne Web App"
+      }
+    ],
+    "title": "Finance Web App",
+    "highlights": ""
+  },
+  {
+    "links": [],
+    "title": "AI Recommendation",
+    "highlights": ""
+  },
+  {
+    "links": [],
+    "title": "Data Pipeline and Visualisation",
+    "highlights": ""
+  }
+]

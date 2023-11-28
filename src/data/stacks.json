@@ -1,0 +1,23 @@
+[
+  {
+    "title": "Language",
+    "content": "Javascript, Typescript, Python, Java, Bash, PowerShell"
+  },
+  { "title": "Frontend", "content": "ReactJS, NextJS, Redux, TailwindCSS" },
+  {
+    "title": "Backend",
+    "content": "NodeJS, ExpressJS, OracleSQL, DynamoDB, Kafka, Databricks, Redis"
+  },
+  {
+    "title": "Testing",
+    "content": "Jest, Cypress,Postman, Cucumber, JMeter, Charles Proxy"
+  },
+  {
+    "title": "DevOps",
+    "content": "Azure, K8S, Docker, Kustomize, Kibana, Jenkins, Liquibase, Webpack"
+  },
+  {
+    "title": "Tools",
+    "content": "Confluence, JIRA, Swagger"
+  }
+]

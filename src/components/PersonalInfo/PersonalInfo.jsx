@@ -1,8 +1,9 @@
-import "./PersonalInfo.css";
-import Separator from "../Separator/Separator";
+import { FaRegFileCode } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 import { SlLocationPin } from "react-icons/sl";
-import { FaRegFileCode } from "react-icons/fa6";
+import Separator from "../Separator/Separator";
+import "./PersonalInfo.css";
+import stacks from "../../data/stacks.json";
 
 const infos = [
   {
@@ -17,34 +18,10 @@ const infos = [
   },
 ];
 
-const stacks = [
-  {
-    title: "Language",
-    content: `Javascript, Typescript, Python, Java, Bash, PowerShell`,
-  },
-  { title: "Frontend", content: `ReactJS, NextJS, Redux, TailwindCSS` },
-  {
-    title: "Backend",
-    content: `NodeJS, ExpressJS, OracleSQL, DynamoDB, Kafka, Databricks, Redis`,
-  },
-  {
-    title: "Testing",
-    content: `: Jest, Cypress,Postman, Cucumber, JMeter, Charles Proxy`,
-  },
-  {
-    title: "DevOps",
-    content: `Azure, K8S, Docker, Kustomize, Kibana, Jenkins, Liquibase, Webpack`,
-  },
-  {
-    title: "Tools",
-    content: `Confluence, JIRA, Swagger`,
-  },
-];
-
 export default function PersonalInfo() {
   return (
     <div className="summary flex flex-col max-lg:w-full w-4/12 rounded-xl p-3">
-      <div className="propic-card flex justify-center p-6 mb-6 rounded-lg">
+      <div className="propic-card w-fit p-6 mb-6 m-auto rounded-lg">
         <img src="sticker.webp" alt="profile" className="h-52" />
       </div>
       <p className="text-2xl font-bold m-2 text-center">Patrick HM Tse</p>
