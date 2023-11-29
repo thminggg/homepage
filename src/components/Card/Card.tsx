@@ -1,8 +1,19 @@
-export default function Card({ links, title, highlights }) {
+type Link = {
+  url: string;
+  title: string;
+};
+
+export default function Card({
+  links,
+  title,
+  highlights,
+}: {
+  links: Array<Link>;
+  title: string;
+  highlights?: string;
+}) {
   return (
     <div
-      href="#"
-      target="_blank"
       rel="noreferrer"
       className="max-md:w-full w-[40%] p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
     >

@@ -1,3 +1,4 @@
+import type { FlowbiteTabsTheme } from "flowbite-react";
 import { Tabs } from "flowbite-react";
 import { FaGithub } from "react-icons/fa";
 import { HiUserCircle } from "react-icons/hi";
@@ -8,18 +9,22 @@ import repos from "../../data/repos.json";
 import tests from "../../data/test-projects.json";
 import Card from "../Card/Card";
 import "./Project.css";
+import { FlowbiteTabsOGTheme } from "../../assets/flowbite-og-theme";
 
 import { Flowbite } from "flowbite-react";
 
-const customTheme = {
+const customTheme: FlowbiteTabsTheme = {
+  ...FlowbiteTabsOGTheme,
   base: "flex flex-col gap-2 w-full",
   tablist: {
     base: "flex text-center",
     styles: {
+      ...FlowbiteTabsOGTheme.tablist.styles,
       default:
         "tablist flex-wrap border-b border-white-200 max-md:flex-nowrap overflow-x-auto",
     },
     tabitem: {
+      ...FlowbiteTabsOGTheme.tablist.tabitem,
       base: "flex items-center justify-center whitespace-nowrap p-3 rounded-t-lg text-sm font-medium first:ml-0 disabled:cursor-not-allowed disabled:text-gray-400 disabled:dark:text-gray-500 focus:ring-cyan-300 focus:outline-none",
     },
   },
@@ -28,7 +33,7 @@ const customTheme = {
 export default function Project() {
   return (
     <div className="projects flex grow max-lg:w-full w-7/12 p-3 rounded-xl text-start">
-      <Flowbite theme={{ theme: customTheme }}>
+      <Flowbite theme={{ theme: { tabs: customTheme } }}>
         <Tabs theme={customTheme}>
           <Tabs.Item active title="Production Project" icon={MdDashboard}>
             <div className="flex flex-wrap gap-3">
