@@ -10,8 +10,8 @@ export default function Card({ links, title, highlights }) {
         {title}
       </p>
       <div className="font-normal text-gray-700 dark:text-gray-400">
-        {links.map((link) => (
-          <div>
+        {links.map((link, index) => (
+          <div key={index}>
             <a
               href={link.url}
               target="_blank"

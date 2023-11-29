@@ -10,11 +10,11 @@
   },
   {
     "title": "Testing",
-    "content": "Jest, Cypress,Postman, Cucumber, JMeter, Charles Proxy"
+    "content": "Jest, Cypress, Postman, Cucumber, JMeter"
   },
   {
     "title": "DevOps",
-    "content": "Azure, K8S, Docker, Kustomize, Kibana, Jenkins, Liquibase, Webpack"
+    "content": "Azure, K8S, Docker, Github Actions, Jenkins, Liquibase, Webpack"
   },
   {
     "title": "Tools",

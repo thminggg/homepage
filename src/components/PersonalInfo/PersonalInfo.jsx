@@ -20,9 +20,9 @@ const infos = [
 
 export default function PersonalInfo() {
   return (
-    <div className="summary flex flex-col max-lg:w-full w-4/12 rounded-xl p-3">
+    <div className="summary flex flex-col max-lg:w-full w-3/12 rounded-xl p-3">
       <div className="propic-card w-fit p-6 mb-6 m-auto rounded-lg">
-        <img src="sticker.webp" alt="profile" className="h-52" />
+        <img src="sticker.webp" alt="profile" className="h-36" />
       </div>
       <p className="text-2xl font-bold m-2 text-center">Patrick HM Tse</p>
       <p className="text-sm text-center">Software Engineer</p>
@@ -44,11 +44,11 @@ export default function PersonalInfo() {
           <div className="flex flex-wrap">
             <div className="w-full text-xs">Tech Stacks</div>
             <div className="w-full break-words">
-              {stacks.map((stack, index) => (
+              {stacks.map(({ title, content }, index) => (
                 <div key={index} className="mb-1">
-                  <span className="font-bold">{stack.title}</span>
+                  <span className="font-bold">{title}</span>
                   {`: `}
-                  <span className="text-sm">{stack.content}</span>
+                  <span className="text-sm">{content}</span>
                 </div>
               ))}
             </div>
