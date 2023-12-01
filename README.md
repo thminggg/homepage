@@ -1,6 +1,6 @@
 ## Live Demo
 
-https://thminggg.github.io/homepage/
+https://thminggg.github.io/homepage
 
 ## Personal Homepage
 
