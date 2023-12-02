@@ -1,17 +1,34 @@
 import type { FlowbiteTabsTheme } from "flowbite-react";
-import { Tabs } from "flowbite-react";
+import { Flowbite, Tabs } from "flowbite-react";
 import { FaGithub } from "react-icons/fa";
 import { HiUserCircle } from "react-icons/hi";
 import { MdDashboard } from "react-icons/md";
 import { VscDebugAll } from "react-icons/vsc";
+import { FlowbiteTabsOGTheme } from "../../assets/flowbite-og-theme";
 import devs from "../../data/dev-projects.json";
+import devStacks from "../../data/dev-stacks.json";
 import repos from "../../data/repos.json";
 import tests from "../../data/test-projects.json";
 import Card from "../Card/Card";
 import "./Project.css";
-import { FlowbiteTabsOGTheme } from "../../assets/flowbite-og-theme";
+import Stacks from "./Stacks";
 
-import { Flowbite } from "flowbite-react";
+type Link = {
+  url: string;
+  title: string;
+};
+
+type Stack = {
+  color: string;
+  name: string;
+};
+
+type Collection = {
+  links: Array<Link>;
+  title: string;
+  highlights: string;
+  stacks?: Array<Stack>;
+};
 
 const customTheme: FlowbiteTabsTheme = {
   ...FlowbiteTabsOGTheme,
@@ -30,41 +47,72 @@ const customTheme: FlowbiteTabsTheme = {
   },
 };
 
+const tabs = [
+  {
+    title: "Github",
+    icon: FaGithub,
+    headline: "Github repositories implemented to demonstrate my tech stacks",
+    collection: repos as Array<Collection>,
+  },
+  {
+    title: "Production",
+    icon: MdDashboard,
+    headline: "Production projects implemented for companies",
+    stacks: devStacks,
+    collection: devs as Array<Collection>,
+  },
+  {
+    title: "Testing",
+    icon: VscDebugAll,
+    headline: "Production projects tested for companies",
+    collection: tests as Array<Collection>,
+  },
+];
+
 export default function Project() {
   return (
     <div className="projects flex grow max-lg:w-full w-7/12 p-3 rounded-xl text-start">
       <Flowbite theme={{ theme: { tabs: customTheme } }}>
         <Tabs theme={customTheme}>
-          <Tabs.Item active title="Production Project" icon={MdDashboard}>
-            <div className="flex flex-wrap gap-3">
-              <div className="w-full">
-                Production projects implemented for companies
-              </div>
-              {devs.map(({ links, title }, index) => (
-                <Card key={index} links={links} title={title} />
-              ))}
-            </div>
-          </Tabs.Item>
-          <Tabs.Item title="Github" icon={FaGithub}>
-            <div className="flex flex-wrap gap-3">
-              <div className="w-full">
-                Github repositories implemented to demonstrate my tech stacks
-              </div>
-              {repos.map(({ links, title }, index) => (
-                <Card key={index} links={links} title={title} />
-              ))}
-            </div>
-          </Tabs.Item>
-          <Tabs.Item title="Testing" icon={VscDebugAll}>
-            <div className="flex flex-wrap gap-3">
-              <div className="w-full">
-                Production projects tested for companies
-              </div>
-              {tests.map(({ links, title }, index) => (
-                <Card key={index} links={links} title={title} />
-              ))}
-            </div>
-          </Tabs.Item>
+          {tabs.map(({ title, icon, headline, stacks, collection }, index) => {
+            return (
+              <Tabs.Item active title={title} icon={icon} key={index}>
+                <div className="flex flex-wrap gap-3">
+                  <div className="w-full">{headline}</div>
+                  {/* Stacks */}
+                  {stacks && (
+                    <div className="mb-3">
+                      <p className="mb-2">
+                        In order not to disclose each project's techstacks,
+                        simply listing everything below:
+                      </p>
+                      {Object.entries(stacks).map(
+                        ([title, entries], stackIndex) => (
+                          <Stacks
+                            stackIndex={stackIndex}
+                            title={title}
+                            entries={entries}
+                          />
+                        )
+                      )}
+                    </div>
+                  )}
+                  {/* Projects */}
+                  {collection.map(
+                    ({ links, title, highlights, stacks }, index) => (
+                      <Card
+                        key={index}
+                        links={links}
+                        title={title}
+                        highlights={highlights}
+                        stacks={stacks}
+                      />
+                    )
+                  )}
+                </div>
+              </Tabs.Item>
+            );
+          })}
           <Tabs.Item title="About me" icon={HiUserCircle}>
             <p className="leading-loose">
               Patrick mainly focuses on Cloud services, FinTech, and Innovation

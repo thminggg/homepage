@@ -1,16 +1,25 @@
+import { stackColors } from "../../assets/stack-colors";
+
 type Link = {
   url: string;
   title: string;
+};
+
+type Stack = {
+  color: string;
+  name: string;
 };
 
 export default function Card({
   links,
   title,
   highlights,
+  stacks,
 }: {
   links: Array<Link>;
   title: string;
   highlights?: string;
+  stacks?: Array<Stack>;
 }) {
   return (
     <div
@@ -34,6 +43,20 @@ export default function Card({
           </div>
         ))}
         {highlights}
+        <div className="flex flex-wrap text-md mt-3">
+          {stacks?.map(
+            ({ color, name }: { color: string; name: string }, index) => {
+              return (
+                <div key={index} className="flex items-center">
+                  <div
+                    className={`inline-block rounded-full h-2 w-2 mr-1 ${stackColors[color]}`}
+                  />
+                  <div className="inline-flex mr-3">{name}</div>
+                </div>
+              );
+            }
+          )}
+        </div>
       </div>
     </div>
   );

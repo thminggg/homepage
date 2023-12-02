@@ -29,7 +29,7 @@ export default function PersonalInfo() {
       <Separator />
       <div className="flex flex-col gap-4">
         {infos.map((info, index) => (
-          <div key={index} className="flex items-center gap-6">
+          <div key={index} className="flex items-start gap-6">
             <div className="m-w-1/12">{info.icon}</div>
             <div className="flex flex-wrap">
               <div className="w-full text-xs">{info.title}</div>
@@ -37,7 +37,7 @@ export default function PersonalInfo() {
             </div>
           </div>
         ))}
-        <div className="flex items-center gap-6">
+        <div className="flex items-start gap-6">
           <div className="m-w-1/12">
             <FaRegFileCode size={34} />
           </div>

@@ -11,7 +11,15 @@
       }
     ],
     "title": "Banking Web App",
-    "highlights": ""
+    "highlights": "",
+    "stacks": [
+      { "color": "black", "name": "NextJS" },
+      { "color": "blue", "name": "ReactJS" },
+      { "color": "lightBlue", "name": "Material UI" },
+      { "color": "darkBlue", "name": "Github Action" },
+      { "color": "yellow", "name": "Google Analytics" },
+      { "color": "lightGreen", "name": "Cypress" }
+    ]
   },
   {
     "links": [
@@ -21,16 +29,63 @@
       }
     ],
     "title": "Banking Web Server",
-    "highlights": ""
+    "highlights": "",
+    "stacks": [
+      { "color": "darkBlue", "name": "TypeScript" },
+      { "color": "green", "name": "ExpressJS" },
+      { "color": "purple", "name": "GraphQL" }
+    ]
   },
   {
     "links": [
       {
-        "url": "https://github.com/thminggg/personal-homepage",
+        "url": "https://thminggg.github.io/homepage/",
+        "title": "Live Demo"
+      },
+      {
+        "url": "https://github.com/thminggg/homepage",
         "title": "Github Repository"
       }
     ],
-    "title": "Personal Hompahe",
-    "highlights": ""
+    "title": "Personal Homepage",
+    "highlights": "",
+    "stacks": [
+      { "color": "blue", "name": "ReactJS" },
+      { "color": "yellow", "name": "HTML" },
+      { "color": "lightBlue", "name": "TailwindCSS" },
+      { "color": "darkBlue", "name": "Github Action" }
+    ]
+  },
+  {
+    "links": [
+      {
+        "url": "https://github.com/thminggg/kafka-etl",
+        "title": "Github Repository"
+      }
+    ],
+    "title": "Kafka ETL (Monorepo)",
+    "highlights": "",
+    "stacks": [
+      { "color": "blue", "name": "ReactJS" },
+      { "color": "lightGreen", "name": "ExpressJS" },
+      { "color": "black", "name": "Kafka" },
+      { "color": "purple", "name": "Lerna" },
+      { "color": "darkBlue", "name": "Docker" }
+    ]
+  },
+  {
+    "links": [
+      {
+        "url": "https://github.com/thminggg/react-vertical-resizable",
+        "title": "Github Repository"
+      }
+    ],
+    "title": "React Vertical Resizable NPM Module",
+    "highlights": "",
+    "stacks": [
+      { "color": "blue", "name": "ReactJS" },
+      { "color": "darkBlue", "name": "TypeScript" },
+      { "color": "lightGreen", "name": "NPM Module" }
+    ]
   }
 ]

@@ -15,7 +15,8 @@
       }
     ],
     "title": "Mobile Banking",
-    "highlights": ""
+    "highlights": "",
+    "stacks": []
   },
   {
     "links": [
@@ -29,6 +30,7 @@
       }
     ],
     "title": "Internet Banking",
-    "highlights": ""
+    "highlights": "",
+    "stacks": []
   }
 ]
