@@ -1,9 +1,11 @@
+import { useState } from "react";
 import { FaRegFileCode } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
+import { RxUpdate } from "react-icons/rx";
 import { SlLocationPin } from "react-icons/sl";
+import stacks from "../../data/stacks.json";
 import Separator from "../Separator/Separator";
 import "./PersonalInfo.css";
-import stacks from "../../data/stacks.json";
 
 const infos = [
   {
@@ -19,10 +21,19 @@ const infos = [
 ];
 
 export default function PersonalInfo() {
+  const propics = ["giraffe.png", "sticker.webp"];
+  const [propic, setPropic] = useState(0);
+
   return (
     <div className="summary flex flex-col max-lg:w-full w-3/12 rounded-xl p-3">
+      <button
+        className="flex justify-end"
+        onClick={() => setPropic((propic + 1) % propics.length)}
+      >
+        <RxUpdate className="propic-update-icon " />
+      </button>
       <div className="propic-card w-fit p-6 mb-6 m-auto rounded-lg">
-        <img src="sticker.webp" alt="profile" className="h-36" />
+        <img src={`${propics[propic]}`} alt="profile" className="h-52" />
       </div>
       <p className="text-3xl font-bold m-2 text-center">Patrick HM Tse</p>
       <p className="inline-block m-auto w-fit mt-2 p-2 text-sm text-center rounded-lg bg-[#373737]">
