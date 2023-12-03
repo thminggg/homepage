@@ -24,8 +24,10 @@ export default function PersonalInfo() {
       <div className="propic-card w-fit p-6 mb-6 m-auto rounded-lg">
         <img src="sticker.webp" alt="profile" className="h-36" />
       </div>
-      <p className="text-2xl font-bold m-2 text-center">Patrick HM Tse</p>
-      <p className="text-sm text-center">Software Engineer</p>
+      <p className="text-3xl font-bold m-2 text-center">Patrick HM Tse</p>
+      <p className="inline-block m-auto w-fit mt-2 p-2 text-sm text-center rounded-lg bg-[#373737]">
+        Software Engineer
+      </p>
       <Separator />
       <div className="flex flex-col gap-4">
         {infos.map((info, index) => (
