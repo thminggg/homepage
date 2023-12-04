@@ -96,21 +96,23 @@ export default function Project() {
                     <div className="w-full">{subtext}</div>
                     {/* Stacks */}
                     {stacks && (
-                      <div className="mb-3">
+                      <div className="mb-3 w-full">
                         <p className="mb-2">
                           In order not to disclose each project's techstacks,
                           simply listing everything below:
                         </p>
-                        {Object.entries(stacks).map(
-                          ([title, entries], stackIndex) => (
-                            <Stacks
-                              key={`${index}-${stackIndex}`}
-                              stackIndex={stackIndex}
-                              title={title}
-                              entries={entries}
-                            />
-                          )
-                        )}
+                        <div className="flex flex-wrap">
+                          {Object.entries(stacks).map(
+                            ([title, entries], stackIndex) => (
+                              <Stacks
+                                key={`${index}-${stackIndex}`}
+                                stackIndex={stackIndex}
+                                title={title}
+                                entries={entries}
+                              />
+                            )
+                          )}
+                        </div>
                       </div>
                     )}
                     {/* Projects */}
@@ -132,12 +134,14 @@ export default function Project() {
           )}
           <Tabs.Item title="About me" icon={HiUserCircle}>
             <p className="leading-loose">
-              Patrick mainly focuses on Cloud services, FinTech, and Innovation
-              using ReactJS and NodeJS. He currently works as a Software
-              Engineer in Test for Lululemon to develop automated testing
-              frameworks. Before working in the eCommerce sector, he was a lead
-              developer at IBM who delivers customized IT solutions for finance
-              and insurance firms.
+              Patrick specializes in Cloud services, FinTech, and Innovation,
+              utilizing ReactJS and NodeJS. He is presently engaged as a
+              Software Engineer in Test within the eCommerce industry, where he
+              is responsible for developing sophisticated automated testing
+              frameworks. Prior to his current role, Patrick held a position as
+              a Lead Software Engineer at a consulting firm, where he provided
+              tailor-made IT solutions for clients in the finance and insurance
+              sectors.
             </p>
           </Tabs.Item>
         </Tabs>

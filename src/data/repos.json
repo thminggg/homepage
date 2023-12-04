@@ -10,12 +10,13 @@
         "title": "Github Repository"
       }
     ],
-    "title": "Banking Web App",
+    "title": "React Web App",
     "highlights": "",
     "stacks": [
       { "color": "black", "name": "NextJS" },
       { "color": "blue", "name": "ReactJS" },
       { "color": "lightBlue", "name": "Material UI" },
+      { "color": "green", "name": "Lottie" },
       { "color": "darkBlue", "name": "Github Action" },
       { "color": "yellow", "name": "Google Analytics" },
       { "color": "lightGreen", "name": "Cypress" }
@@ -28,7 +29,7 @@
         "title": "Github Repository"
       }
     ],
-    "title": "Banking Web Server",
+    "title": "GraphQL Backend Server",
     "highlights": "",
     "stacks": [
       { "color": "darkBlue", "name": "TypeScript" },

@@ -21,7 +21,7 @@ const infos = [
 ];
 
 export default function PersonalInfo() {
-  const propics = ["giraffe.png", "sticker.webp"];
+  const propics = ["sticker.webp", "giraffe.png"];
   const [propic, setPropic] = useState(0);
 
   return (
@@ -33,7 +33,7 @@ export default function PersonalInfo() {
         <RxUpdate className="propic-update-icon " />
       </button>
       <div className="propic-card w-fit p-6 mb-6 m-auto rounded-lg">
-        <img src={`${propics[propic]}`} alt="profile" className="h-52" />
+        <img src={`${propics[propic]}`} alt="profile" className="max-h-52" />
       </div>
       <p className="text-3xl font-bold m-2 text-center">Patrick HM Tse</p>
       <p className="inline-block m-auto w-fit mt-2 p-2 text-sm text-center rounded-lg bg-[#373737]">

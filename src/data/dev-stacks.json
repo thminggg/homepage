@@ -1,32 +1,30 @@
 {
-  "Languages": [
+  "🌐 Frontend": [
     { "color": "blue", "name": "TypeScript" },
     { "color": "yellow", "name": "JavaScript" },
     { "color": "blue", "name": "ReactJS" },
-    { "color": "lightBlue", "name": "Python" }
-  ],
-  "Web": [
     { "color": "yellow", "name": "HTML" },
     { "color": "lightBlue", "name": "CSS" }
   ],
-  "BE": [
+  "📟 Backend": [
     { "color": "green", "name": "NodeJS" },
     { "color": "red", "name": "Redis" },
     { "color": "orange", "name": "MeteorJS" },
     { "color": "red", "name": "Databrick" },
+    { "color": "lightBlue", "name": "Python" },
     { "color": "darkBlue", "name": "Kafka" },
     { "color": "purple", "name": "PHP" },
     { "color": "lightGreen", "name": "WhatsApp API" },
     { "color": "blue", "name": "PowerShell" }
   ],
-  "DB": [
+  "🛢️ Database": [
     { "color": "red", "name": "MSSQL" },
     { "color": "orange", "name": "OracleSQL" },
     { "color": "lightGreen", "name": "MongoDB" },
     { "color": "orange", "name": "Liquibase" },
     { "color": "orange", "name": "MySQL" }
   ],
-  "DevOps": [
+  "⚙️ DevOps": [
     { "color": "darkBlue", "name": "K8S" },
     { "color": "blue", "name": "Docker" },
     { "color": "darkBlue", "name": "Bash" }
