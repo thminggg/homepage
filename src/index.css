@@ -2,10 +2,13 @@
 
 :root {
   --first-color: #2c64eb;
+  --lg: 1024px;
+  --md: 768px;
 }
 
 html * {
   color: #0e1629;
+  scroll-behavior: smooth;
 }
 
 body {

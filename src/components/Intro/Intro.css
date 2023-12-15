@@ -1,0 +1,30 @@
+.slogan {
+  color: #000;
+  font-size: 3.625rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 5.625rem;
+  letter-spacing: 0.0725rem;
+
+  @media (max-width: 1440px) {
+    font-size: 2.625em;
+    line-height: 3.625rem;
+  }
+}
+
+.contact {
+  color: #fff;
+  text-align: center;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.02rem;
+  background: #2c64ec;
+  border-radius: 5px;
+  padding: 1rem 2rem 1rem 2rem;
+  opacity: 85%;
+}
+
+.highlight {
+  color: #2c64eb;
+}
