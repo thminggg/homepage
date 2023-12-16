@@ -2,8 +2,6 @@
 
 :root {
   --first-color: #2c64eb;
-  --lg: 1024px;
-  --md: 768px;
 }
 
 html * {
@@ -16,9 +14,4 @@ body {
   font-family: "Poppins", sans-serif, -apple-system;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
 }

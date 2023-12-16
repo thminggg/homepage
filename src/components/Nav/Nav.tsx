@@ -1,61 +1,31 @@
 import { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
-import Separator from "../Separator/Separator";
+import links from "../../data/links.json";
+import { handleLinkClick } from "../../helpers/scrollTrack";
 import "./Nav.css";
 
 const navId = "nav";
-const links = [
-  { name: "Home", href: "#home" },
-  { name: "About", href: "#about" },
-  { name: "Skills", href: "#skills" },
-  { name: "Work", href: "#work" },
-  { name: "Contact", href: "#contact" },
-];
-
-const handleLinkClick = (
-  e: React.MouseEvent<HTMLAnchorElement>,
-  id: string,
-  setActive: (val: number) => void,
-  index: number
-) => {
-  e.preventDefault();
-  // Set Link Style
-  setActive(index);
-
-  // Scroll to Top
-  if (id === "#home") {
-    return window.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: "smooth",
-    });
-  }
-
-  // Section Specific Scroll
-  const section = document.querySelector(id);
-  section?.scrollIntoView({ behavior: "smooth", block: "start" });
-};
-
 const Drawer = ({
   openMenu,
-  setActive,
+  setOpenMenu,
 }: {
   openMenu: boolean;
-  setActive: (val: number) => void;
+  setOpenMenu: (val: boolean) => void;
 }) => {
   return (
-    <div className="w-full relative xl:hidden">
-      <div className="absolute top-3 right-0 w-full bg-white pb-5">
+    <div className="w-full relative md:hidden">
+      <div className="absolute top-3 right-0 w-full bg-white">
         <div className="flex flex-col gap-1 flex-wrap justify-end">
           {links.map((link, index) => (
             <a
               key={index}
               href={link.href}
-              className={`link hidden ml-auto responsive-menu xl:inline-block ${
+              className={`nav-link hidden ml-auto responsive-menu xl:inline-block ${
                 openMenu && "open"
               }`}
               onClick={(e) => {
-                handleLinkClick(e, link.href, setActive, index);
+                handleLinkClick(e, link.href);
+                setOpenMenu(!openMenu);
               }}
             >
               {link.name}
@@ -68,40 +38,36 @@ const Drawer = ({
 };
 
 export default function Nav() {
-  const [active, setActive] = useState(0);
   const [openMenu, setOpenMenu] = useState(false);
 
   return (
     <div
       id={navId}
-      className="flex flex-wrap w-full sticky top-0 pt-7 bg-white"
+      className="flex flex-wrap pl-6 pr-6 lg:pl-0 lg:pr-0 lg:ml-auto lg:mr-auto w-full max-w-screen-lg justify-between items-center sticky top-0 pt-7 pb-5 bg-white z-10"
     >
       <a href="/" className="name ml-2">
         Patrick
       </a>
-      <div className="flex flex-wrap gap-8 justify-end ml-auto">
+      <div className="flex flex-wrap gap-10 justify-between">
         {links.map((link, index) => (
           <a
             key={index}
             href={link.href}
-            className={`link hidden xl:inline-block ${
-              active === index ? "active" : ""
+            className={`nav-link hidden md:inline-block ${
+              index === 0 && "active"
             }`}
             onClick={(e) => {
-              handleLinkClick(e, link.href, setActive, index);
+              handleLinkClick(e, link.href);
             }}
           >
             {link.name}
           </a>
         ))}
         <button onClick={() => setOpenMenu(!openMenu)}>
-          <GiHamburgerMenu className="h-6 w-6 block xl:hidden" />
+          <GiHamburgerMenu className="h-6 w-6 block md:hidden" />
         </button>
       </div>
-      <Drawer openMenu={openMenu} setActive={setActive} />
-      <div className="w-full mt-6">
-        <Separator />
-      </div>
+      <Drawer openMenu={openMenu} setOpenMenu={setOpenMenu} />
     </div>
   );
 }

@@ -1,9 +1,10 @@
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import "./Intro.css";
+import { handleLinkClick } from "../../helpers/scrollTrack";
 
 export default function Intro({ id }: { id: string }) {
   return (
-    <div id={id} className="flex flex-wrap mt-10 lg:mt-20 items-center">
+    <section id={id} className="flex flex-wrap items-center pt-20">
       <div className="w-full lg:max-w-[60%] lg:w-fit">
         <p className="slogan">
           Hi,
@@ -12,12 +13,16 @@ export default function Intro({ id }: { id: string }) {
           <br />
           Software Engineer
         </p>
-        <button
-          onClick={() => console.log("contact")}
+        {/* <a href="#contact" onClick={(e) => handleLinkClick(e, "#contact")}>
+          <button className="contact mt-6 mb-6">Contact</button>
+        </a> */}
+        <a
+          href="#contact"
           className="contact mt-6 mb-6"
+          onClick={(e) => handleLinkClick(e, "#contact")}
         >
           Contact
-        </button>
+        </a>
         <div className="flex gap-3 mt-3">
           <a
             href="https://github.com/thminggg"
@@ -40,6 +45,6 @@ export default function Intro({ id }: { id: string }) {
         alt="propic"
         className="w-6/12 m-auto min-w-[30%] md:w-5/12 lg:w-4/12 lg:m-0 lg:ml-auto"
       />
-    </div>
+    </section>
   );
 }

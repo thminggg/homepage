@@ -1,5 +1,5 @@
 import "./Separator.css";
 
-export default function Separator() {
-  return <div className="separator" />;
+export default function Separator({ className }: { className?: string }) {
+  return <div className={`separator ${className}`} />;
 }
