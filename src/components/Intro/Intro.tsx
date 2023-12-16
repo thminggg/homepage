@@ -13,9 +13,6 @@ export default function Intro({ id }: { id: string }) {
           <br />
           Software Engineer
         </p>
-        {/* <a href="#contact" onClick={(e) => handleLinkClick(e, "#contact")}>
-          <button className="contact mt-6 mb-6">Contact</button>
-        </a> */}
         <a
           href="#contact"
           className="contact mt-6 mb-6"
@@ -43,7 +40,7 @@ export default function Intro({ id }: { id: string }) {
       <img
         src="propic2.svg"
         alt="propic"
-        className="w-6/12 m-auto min-w-[30%] md:w-5/12 lg:w-4/12 lg:m-0 lg:ml-auto"
+        className="hidden m-auto min-w-[30%] lg:block lg:w-4/12 lg:m-0 lg:ml-auto"
       />
     </section>
   );

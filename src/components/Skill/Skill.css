@@ -1,0 +1,71 @@
+svg {
+  width: 2.8rem;
+  height: 2.8rem;
+  display: inline-block;
+}
+
+.stacks img {
+  height: 2.8rem;
+  width: auto;
+  display: inline-block;
+}
+
+.ts > path {
+  color: #4272ba;
+}
+
+.js > path {
+  color: #ebd94d;
+}
+
+.nodejs > path {
+  color: #5cb36b;
+}
+
+.react > path {
+  color: #6eb1cb;
+}
+
+.tailwind > path {
+  color: #00b4f3;
+}
+
+.azure > path {
+  color: #428bd1;
+}
+
+.aws > path {
+  color: #f1a13e;
+}
+
+.dynamodb > path {
+  color: #4f5ed5;
+}
+
+.mysql > path {
+  color: #2f648a;
+}
+
+.mongo > path {
+  color: #6cab55;
+}
+
+.python > path {
+  color: #526b86;
+}
+
+.k8s > path {
+  color: #1c5ed4;
+}
+
+.docker > path {
+  color: #0867ce;
+}
+
+.databricks > path {
+  color: #fc3e36;
+}
+
+.postgres > path {
+  color: #296188;
+}
