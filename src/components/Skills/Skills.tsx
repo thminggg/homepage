@@ -15,16 +15,16 @@ import {
   SiMicrosoftazure,
   SiTailwindcss,
 } from "react-icons/si";
-import "./Skill.css";
+import "./Skills.css";
 
-export default function Skill({ id }: { id: string }) {
+export default function Skills({ id }: { id: string }) {
   return (
     <section
       id={id}
       className="flex flex-wrap items-center pt-20"
       style={{ minHeight: "648px", paddingTop: "80px" }}
     >
-      <h1 className="w-full text-center text-3xl section-highlight">Skill</h1>
+      <h1 className="w-full text-center text-3xl section-highlight">Skills</h1>
       <div className="w-full flex flex-col gap-3 mt-3 mb-3 md:w-6/12">
         <h2 className="text-center text-xl mb-6 title">Professional Skills</h2>
         <div className="stacks grid grid-rows-4 gap-3">
@@ -55,8 +55,13 @@ export default function Skill({ id }: { id: string }) {
       </div>
       <div className="w-full md:w-6/12">
         <img
-          src="it-abstract.png"
-          className="w-auto h-auto ml-auto mr-auto"
+          src="it-abstract.svg"
+          className="hidden w-auto h-auto ml-auto mr-auto md:inline-block"
+          alt="it-abstract"
+        />
+        <img
+          src="up.svg"
+          className="block w-9/12 h-auto ml-auto mr-auto mt-9 md:hidden"
           alt="it-abstract"
         />
       </div>

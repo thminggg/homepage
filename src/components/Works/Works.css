@@ -1,0 +1,4 @@
+.theme,
+.theme > svg > path {
+  color: var(--first-color);
+}
