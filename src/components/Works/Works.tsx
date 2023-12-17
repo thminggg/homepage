@@ -68,10 +68,10 @@ export default function Works({ id }: { id: string }) {
     <section
       id={id}
       className="flex flex-wrap items-center pt-20"
-      style={{ minHeight: "648px", paddingTop: "80px" }}
+      style={{ paddingTop: "80px" }}
     >
       <h1 className="w-full text-center text-3xl section-highlight">Works</h1>
-      <div className="w-full md:w-6/12">
+      <div className="hidden w-full md:block md:w-6/12">
         <img
           src="projects.svg"
           className="w-auto h-auto ml-auto mr-auto pr-6"

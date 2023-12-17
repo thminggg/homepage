@@ -7,6 +7,7 @@ import { trackResize, trackScroll } from "./helpers/scrollTrack";
 import About from "./components/About/About";
 import Skills from "./components/Skills/Skills";
 import Works from "./components/Works/Works";
+import Contact from "./components/Contact/Contact";
 
 function App() {
   useEffect(() => {
@@ -22,13 +23,8 @@ function App() {
         <Intro id="home" />
         <About id="about" />
         <Skills id="skills" />
-        <Works id="skills" />
-        <section
-          id="contact"
-          style={{ minHeight: "648px", paddingTop: "80px" }}
-        >
-          contact
-        </section>
+        <Works id="works" />
+        <Contact id="contact" />
       </div>
     </>
   );

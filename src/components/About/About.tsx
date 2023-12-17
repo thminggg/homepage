@@ -5,7 +5,7 @@ export default function About({ id }: { id: string }) {
     <section
       id={id}
       className="flex flex-wrap items-center pt-20"
-      style={{ minHeight: "648px", paddingTop: "80px" }}
+      style={{ minHeight: "500px", paddingTop: "80px" }}
     >
       <h1 className="w-full text-center text-3xl section-highlight">About</h1>
       <div className="w-full md:w-6/12">
