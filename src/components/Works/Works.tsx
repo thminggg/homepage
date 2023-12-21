@@ -44,8 +44,11 @@ const Projects = () => {
   return (
     <div className="h-56 sm:h-64 xl:h-80">
       <Carousel slide={false} pauseOnHover indicators={false}>
-        {projects.map(({ title, href, img }) => (
-          <div className="flex flex-col h-full items-center justify-center">
+        {projects.map(({ title, href, img }, index) => (
+          <div
+            key={index}
+            className="flex flex-col h-full items-center justify-center"
+          >
             <p className="text-center font-semibold md:text-lg lg:text-xl">
               {title}
             </p>
