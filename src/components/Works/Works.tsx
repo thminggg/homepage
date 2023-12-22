@@ -56,7 +56,7 @@ const Projects = () => {
               <img
                 src={img}
                 alt="sportsync"
-                className="max-h-44 w-auto ml-auto mr-auto"
+                className="max-h-44 w-auto mx-auto"
               />
             </a>
           </div>
@@ -77,7 +77,7 @@ export default function Works({ id }: { id: string }) {
       <div className="hidden w-full md:block md:w-6/12">
         <img
           src="projects.svg"
-          className="w-auto h-auto ml-auto mr-auto pr-6"
+          className="w-auto h-auto mx-auto pr-6"
           alt="it-abstract"
         />
       </div>

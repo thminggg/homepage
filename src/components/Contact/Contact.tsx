@@ -13,7 +13,7 @@ export default function Contact({ id }: { id: string }) {
         Contact
       </h1>
       <div className="w-full flex flex-col mt-3 mb-3 md:w-full">
-        <div className="grid grid-rows-3 gap-8 ml-auto mr-auto">
+        <div className="grid grid-rows-3 gap-8 mx-auto">
           <div className="flex items-center">
             <MdOutlineMarkEmailUnread className="h-4/6 mr-9 gmail" />
             <p className="text-lg font-semibold md:text-2xl">

@@ -56,7 +56,7 @@ export default function Skills({ id }: { id: string }) {
       <div className="w-full md:w-6/12">
         <img
           src="it-abstract.svg"
-          className="hidden w-auto h-auto ml-auto mr-auto md:inline-block"
+          className="hidden w-auto h-auto mx-auto md:inline-block"
           alt="it-abstract"
         />
       </div>

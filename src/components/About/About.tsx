@@ -12,7 +12,7 @@ export default function About({ id }: { id: string }) {
         <img
           src="sticker.webp"
           alt="propic"
-          className="w-6/12 h-auto ml-auto mr-auto"
+          className="w-6/12 h-auto mx-auto"
         />
       </div>
       <div className="w-full md:w-6/12">
