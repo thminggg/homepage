@@ -1,4 +1,4 @@
-const trackWidth = Number(process.env.SCROLL_TRACK_WIDTH);
+const TRACK_WIDTH = Number(process.env.REACT_APP_SCROLL_TRACK_WIDTH);
 
 export const handleLinkClick = (
   e: React.MouseEvent<HTMLAnchorElement>,
@@ -23,7 +23,9 @@ export const updateActiveSection = (
   sections: NodeListOf<HTMLElement>,
   navLinks: NodeListOf<Element>
 ) => {
-  console.log("scroll");
+  // Only Update Active Section for Laptop
+  if (window.innerWidth < TRACK_WIDTH) return;
+
   let currentSectionIndex = -1;
   sections.forEach((section, index) => {
     const sectionTop = section.getBoundingClientRect().top;
@@ -42,7 +44,7 @@ export const updateActiveSection = (
 
 export const trackScroll = () => {
   // Only Track for Laptop
-  if (window.innerWidth < trackWidth) return;
+  if (window.innerWidth < TRACK_WIDTH) return;
 
   const sections = document.querySelectorAll("section");
   const navLinks = document.querySelectorAll(".nav-link");
@@ -57,12 +59,12 @@ export const trackScroll = () => {
 
 export const trackResize = (initialWidth: number) => {
   // No resize listener required for laptop
-  if (initialWidth >= trackWidth) return;
+  if (initialWidth >= TRACK_WIDTH) return;
 
   // Add only once when it's resized to larger screen
   let isTrackScrollSet = false;
   window.addEventListener("resize", function () {
-    if (!isTrackScrollSet && window.innerWidth >= trackWidth) {
+    if (!isTrackScrollSet && window.innerWidth >= TRACK_WIDTH) {
       isTrackScrollSet = true;
       trackScroll();
     }
