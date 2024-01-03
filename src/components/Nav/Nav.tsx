@@ -75,7 +75,7 @@ export default function Nav({
       id={navId}
       className="flex flex-wrap pl-6 pr-6 lg:pl-0 lg:pr-0 lg:ml-auto lg:mr-auto w-full max-w-screen-lg justify-between items-center sticky top-0 pt-7 pb-5 bg-white dark:bg-dark z-10"
     >
-      <a href="/" className="name ml-2">
+      <a href="/homepage" className="name ml-2">
         Patrick
       </a>
       <div className="flex flex-wrap gap-10 justify-between items-center">
