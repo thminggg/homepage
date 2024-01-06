@@ -27,9 +27,9 @@ export default function About({ id }: { id: string }) {
           frameworks.
           <br />
           <br />
-          Before that, working as as a Lead Software Engineer at a consulting
-          firm to provide tailor-made IT solutions for clients in the finance
-          and insurance sectors.
+          Before that, working as a Lead Software Engineer at a consulting firm
+          to provide tailor-made IT solutions for clients in the finance and
+          insurance sectors.
         </p>
       </div>
     </section>
