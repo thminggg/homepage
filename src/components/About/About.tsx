@@ -16,7 +16,14 @@ export default function About({ id }: { id: string }) {
         />
       </div>
       <div className="w-full md:w-6/12">
-        <h2 className="text-left text-xl mb-6 title">Vancouver, Canada</h2>
+        <h2 className="text-left text-xl mb-6 title">
+          Vancouver, Canada
+          <img
+            src="ass.png"
+            alt="solution architect"
+            className="inline-block w-2/12 pl-2"
+          />
+        </h2>
         <p className="text-left italic">
           Software Engineer specialize in Cloud services, FinTech, and
           Innovation, utilizing ReactJS and NodeJS.

@@ -23,7 +23,7 @@ function App() {
         <Intro id="home" />
         <About id="about" />
         <Skills id="skills" />
-        <Works id="works" />
+        <Works id="works" dark={dark} />
         <Contact id="contact" />
       </div>
     </div>
