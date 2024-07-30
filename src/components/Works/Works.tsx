@@ -55,7 +55,20 @@ export default function Works({ id, dark }: { id: string; dark: boolean }) {
       {
         title: (
           <>
-            Commercial Banking <span className="theme"> WhatsApp AI </span>
+            eCommerce
+            <BiLogoReact style={{ color: "#BF2B34" }} />
+            <span style={{ color: "#BF2B34" }}>React </span>
+            Web App
+          </>
+        ),
+        href: "https://shop.lululemon.com",
+        img: !dark ? "lulu.svg" : "lulu-white.svg",
+      },
+      {
+        title: (
+          <>
+            Commercial Banking{" "}
+            <span style={{ color: "#DA3832" }}> WhatsApp AI </span>
             Chatbot
           </>
         ),
@@ -66,9 +79,8 @@ export default function Works({ id, dark }: { id: string; dark: boolean }) {
         title: (
           <>
             Athlete Scouting
-            <span className="theme">
-              <BiLogoReact /> React{" "}
-            </span>
+            <BiLogoReact style={{ color: "#E47D3A" }} />
+            <span style={{ color: "#E47D3A" }}>React </span>
             Web App
           </>
         ),
