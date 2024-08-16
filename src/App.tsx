@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import "./App.css";
-import About from "./components/About/About";
 import Contact from "./components/Contact/Contact";
 import Intro from "./components/Intro/Intro";
 import Nav from "./components/Nav/Nav";
@@ -21,9 +20,8 @@ function App() {
       <Nav dark={dark} setDark={setDark} />
       <div className="pl-6 pr-6 pb-48 lg:pl-0 lg:pr-0 lg:m-auto max-w-5xl">
         <Intro id="home" />
-        <About id="about" />
-        <Skills id="skills" />
         <Works id="works" dark={dark} />
+        <Skills id="skills" />
         <Contact id="contact" />
       </div>
     </div>
