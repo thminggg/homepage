@@ -30,6 +30,10 @@ svg {
   color: #00b4f3;
 }
 
+.graphql > path {
+  color: #e82f9a;
+}
+
 .azure > path {
   color: #428bd1;
 }
@@ -68,4 +72,8 @@ svg {
 
 .postgres > path {
   color: #296188;
+}
+
+.github-actions > path {
+  color: #2088ff;
 }

@@ -16,6 +16,8 @@ import {
   SiTailwindcss,
 } from "react-icons/si";
 import "./Skills.css";
+import { BiLogoGraphql } from "react-icons/bi";
+import { SiGithubactions } from "react-icons/si";
 
 export default function Skills({ id }: { id: string }) {
   return (
@@ -37,6 +39,7 @@ export default function Skills({ id }: { id: string }) {
             <BiLogoJavascript className="js" />
             <BiLogoReact className="react" />
             <SiTailwindcss className="tailwind" />
+            <BiLogoGraphql className="graphql" />
             <BiLogoNodejs className="nodejs" />
             <img src="python.svg" alt="python" />
           </div>
@@ -50,6 +53,7 @@ export default function Skills({ id }: { id: string }) {
             <SiKubernetes className="k8s" />
             <SiDocker className="docker" />
             <img src="jenkins.svg" className="w-12 h-auto" alt="jenkins" />
+            <SiGithubactions className="github-actions" />
           </div>
         </div>
       </div>
