@@ -78,6 +78,17 @@ export default function Works({ id, dark }: { id: string; dark: boolean }) {
       {
         title: (
           <>
+            Insurance{" "}
+            <span style={{ color: "#DA3832" }}> AI Recommendation </span>
+            Engine
+          </>
+        ),
+        href: "https://www.aia.com.hk/en/about-aia/about-us/media-centre/press-releases/2023/aia-press-release-20231026",
+        img: "aia.svg",
+      },
+      {
+        title: (
+          <>
             Athlete Scouting
             <BiLogoReact style={{ color: "#E47D3A" }} />
             <span style={{ color: "#E47D3A" }}>React </span>
