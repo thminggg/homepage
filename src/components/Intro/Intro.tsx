@@ -5,13 +5,12 @@ import { handleLinkClick } from "../../helpers/scrollTrack";
 export default function Intro({ id }: { id: string }) {
   return (
     <section id={id} className="flex flex-wrap items-center pt-20">
-      <div className="w-full lg:max-w-[60%] lg:w-fit">
+      <div className="w-full lg:max-w-[65%] lg:w-fit">
         <p className="slogan">
           Hi,
           <br />
           I'm <span className="highlight">Patrick</span>
-          <br />
-          Software Engineer
+          <br />a Software Engineer
         </p>
         <a
           href="#contact"
@@ -38,7 +37,7 @@ export default function Intro({ id }: { id: string }) {
         </div>
       </div>
       <img
-        src="propic2.svg"
+        src="it-abstract.svg"
         alt="propic"
         className="hidden m-auto min-w-[30%] lg:block lg:w-4/12 lg:m-0 lg:ml-auto"
       />

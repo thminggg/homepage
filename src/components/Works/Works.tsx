@@ -1,53 +1,5 @@
-import type { CustomFlowbiteTheme } from "flowbite-react";
-import { Carousel } from "flowbite-react";
-import { ReactNode, useMemo } from "react";
-import { BiLogoReact } from "react-icons/bi";
+import { useMemo } from "react";
 import "./Works.css";
-
-const customTheme: CustomFlowbiteTheme["carousel"] = {
-  control: {
-    icon: "text-gray-800 dark:text-white sm:h-6 sm:w-6",
-  },
-};
-
-const Projects = ({
-  projects,
-}: {
-  projects: Array<{
-    title: ReactNode;
-    href: string;
-    img: string;
-  }>;
-}) => {
-  return (
-    <div className="h-56 sm:h-64 xl:h-80">
-      <Carousel
-        theme={customTheme}
-        slide={false}
-        pauseOnHover
-        indicators={false}
-      >
-        {projects.map(({ title, href, img }, index) => (
-          <div
-            key={index}
-            className="flex flex-col h-full items-center justify-center"
-          >
-            <p className="text-center font-semibold md:text-lg lg:text-xl">
-              {title}
-            </p>
-            <a href={href} target="__blank" className="w-full">
-              <img
-                src={img}
-                alt="sportsync"
-                className="max-h-44 w-auto mx-auto"
-              />
-            </a>
-          </div>
-        ))}
-      </Carousel>
-    </div>
-  );
-};
 
 export default function Works({ id, dark }: { id: string; dark: boolean }) {
   const projects = useMemo(
@@ -55,61 +7,62 @@ export default function Works({ id, dark }: { id: string; dark: boolean }) {
       {
         title: (
           <>
-            eCommerce
-            <BiLogoReact style={{ color: "#BF2B34" }} />
-            <span style={{ color: "#BF2B34" }}>React </span>
-            Web App
+            <p className="overflow-hidden whitespace-nowrap">React App</p>
           </>
         ),
         href: "https://shop.lululemon.com",
-        img: !dark ? "lulu.svg" : "lulu-white.svg",
+        img: !dark ? "lulu-logo.svg" : "lulu-logo-white.svg",
       },
       {
         title: (
           <>
-            Commercial Banking{" "}
-            <span style={{ color: "#DA3832" }}> WhatsApp AI </span>
-            Chatbot
+            <p className="overflow-hidden whitespace-nowrap">AI Chatbot</p>
           </>
         ),
         href: "https://www.hangseng.com/en-hk/business/banking-digitally/online-services-beri/",
-        img: !dark ? "hs.svg" : "hs-white.svg",
+        img: !dark ? "hs-logo.svg" : "hs-logo-white.svg",
       },
       {
         title: (
           <>
-            Insurance{" "}
-            <span style={{ color: "#DA3832" }}> AI Recommendation </span>
-            Engine
+            <p className="overflow-hidden whitespace-nowrap">
+              AI & Microservices
+            </p>
           </>
         ),
         href: "https://www.aia.com.hk/en/about-aia/about-us/media-centre/press-releases/2023/aia-press-release-20231026",
-        img: "aia.svg",
+        img: "aia-logo.svg",
       },
       {
         title: (
           <>
-            Athlete Scouting
-            <BiLogoReact style={{ color: "#E47D3A" }} />
-            <span style={{ color: "#E47D3A" }}>React </span>
-            Web App
+            <p className="overflow-hidden whitespace-nowrap">Automation </p>
           </>
         ),
-        href: "https://www.sportsync.com/",
-        img: "sportsync.svg",
+        href: "https://www.vaisala.com/en",
+        img: !dark ? "v-logo.svg" : "v-logo-white.svg",
       },
       {
         title: (
           <>
-            Finance
-            <span className="theme">
-              <BiLogoReact /> React{" "}
-            </span>
-            Web App
+            <p className="overflow-hidden whitespace-nowrap">
+              Fullstack Web App
+            </p>
           </>
         ),
         href: "https://www.ufinancehk.co/",
-        img: "uf.svg",
+        img: "uf-logo.svg",
+      },
+      {
+        title: (
+          <>
+            <p className="overflow-hidden whitespace-nowrap">
+              Fullstack Web App
+            </p>
+          </>
+        ),
+        href: "https://www.sportsync.com/",
+        img: "ss-logo.svg",
       },
     ],
     [dark]
@@ -122,16 +75,22 @@ export default function Works({ id, dark }: { id: string; dark: boolean }) {
       style={{ paddingTop: "80px" }}
     >
       <h1 className="w-full text-center text-3xl section-highlight">Works</h1>
-      <div className="hidden w-full md:block md:w-6/12">
-        <img
-          src="projects.svg"
-          className="w-auto h-auto mx-auto pr-6"
-          alt="it-abstract"
-        />
-      </div>
-      <div className="w-full flex flex-col mt-3 mb-3 md:w-6/12">
-        <h2 className="text-center text-xl title">Production Projects</h2>
-        <Projects projects={projects} />
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mx-auto mt-6">
+        {projects.map(({ title, href, img }, index) => (
+          <div
+            key={index}
+            className={`flex flex-col rounded-lg p-3 ${
+              !dark ? "bg-slate-100" : "bg-slate-600"
+            }`}
+          >
+            <p className="text-center font-semibold md:text-lg lg:text-xl">
+              {title}
+            </p>
+            <a href={href} target="__blank" className="w-full">
+              <img src={img} alt="logo" className="h-32 w-auto m-auto" />
+            </a>
+          </div>
+        ))}
       </div>
     </section>
   );

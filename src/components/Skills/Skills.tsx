@@ -27,8 +27,7 @@ export default function Skills({ id }: { id: string }) {
       style={{ paddingTop: "80px" }}
     >
       <h1 className="w-full text-center text-3xl section-highlight">Skills</h1>
-      <div className="w-full flex flex-col gap-3 mt-3 mb-3 md:w-6/12">
-        <h2 className="text-center text-xl mb-6 title">Professional Skills</h2>
+      <div className="w-full flex flex-col gap-3 mt-3 mb-3">
         <div className="stacks grid grid-rows-4 gap-3">
           <div className="flex flex-wrap justify-evenly items-center gap-3">
             <SiAmazonaws className="aws" />
@@ -56,13 +55,6 @@ export default function Skills({ id }: { id: string }) {
             <SiGithubactions className="github-actions" />
           </div>
         </div>
-      </div>
-      <div className="w-full md:w-6/12">
-        <img
-          src="it-abstract.svg"
-          className="hidden w-auto h-auto mx-auto md:inline-block"
-          alt="it-abstract"
-        />
       </div>
     </section>
   );
