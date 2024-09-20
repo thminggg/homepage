@@ -87,7 +87,7 @@ export default function Works({ id, dark }: { id: string; dark: boolean }) {
               {title}
             </p>
             <a href={href} target="__blank" className="w-full">
-              <img src={img} alt="logo" className="h-32 w-auto m-auto" />
+              <img src={img} alt="logo" className="h-32 w-auto m-auto md:p-6" />
             </a>
           </div>
         ))}

@@ -40,7 +40,7 @@ export default function Skills({ id }: { id: string }) {
             <SiTailwindcss className="tailwind" />
             <BiLogoGraphql className="graphql" />
             <BiLogoNodejs className="nodejs" />
-            <img src="python.svg" alt="python" />
+            <img src="/python.svg" alt="python" />
           </div>
           <div className="flex flex-wrap justify-evenly items-center gap-3">
             <SiAmazondynamodb className="dynamodb" />
@@ -51,7 +51,7 @@ export default function Skills({ id }: { id: string }) {
           <div className="flex flex-wrap justify-evenly items-center gap-3">
             <SiKubernetes className="k8s" />
             <SiDocker className="docker" />
-            <img src="jenkins.svg" className="w-12 h-auto" alt="jenkins" />
+            <img src="/jenkins.svg" className="w-12 h-auto" alt="jenkins" />
             <SiGithubactions className="github-actions" />
           </div>
         </div>
