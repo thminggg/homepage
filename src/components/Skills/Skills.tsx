@@ -19,11 +19,16 @@ import "./Skills.css";
 import { BiLogoGraphql } from "react-icons/bi";
 import { SiGithubactions } from "react-icons/si";
 
-export default function Skills({ id }: { id: string }) {
+interface SkillsProps {
+  id: string;
+  className?: string;
+}
+
+function Skills({ id, className }: SkillsProps) {
   return (
     <section
       id={id}
-      className="flex flex-wrap items-center pt-20"
+      className={`flex flex-col ${className}`}
       style={{ paddingTop: "80px" }}
     >
       <h1 className="w-full text-center text-3xl section-highlight">Skills</h1>
@@ -59,3 +64,5 @@ export default function Skills({ id }: { id: string }) {
     </section>
   );
 }
+
+export default Skills;

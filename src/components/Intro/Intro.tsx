@@ -1,46 +1,56 @@
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-import "./Intro.css";
 import { handleLinkClick } from "../../helpers/scrollTrack";
+import "./Intro.css";
 
-export default function Intro({ id }: { id: string }) {
+interface IntroProps {
+  id: string;
+  className?: string;
+}
+
+function Intro({ id, className }: IntroProps) {
   return (
-    <section id={id} className="flex flex-wrap items-center pt-20">
-      <div className="w-full lg:max-w-[65%] lg:w-fit">
-        <p className="slogan">
-          Hi,
-          <br />
-          I'm <span className="highlight">Patrick</span>
-          <br />a Software Engineer
-        </p>
-        <a
-          href="#contact"
-          className="contact mt-6 mb-6"
-          onClick={(e) => handleLinkClick(e, "#contact")}
-        >
-          Contact
-        </a>
-        <div className="flex gap-3 mt-3">
+    <section id={id} className={className}>
+      <div className="w-full flex items-center">
+        <div className="w-full md:w-[75%]">
+          <p className="slogan">
+            Hi,
+            <br />
+            I'm <span className="highlight">Patrick</span>
+            <br />
+            Software Engineer
+          </p>
           <a
-            href="https://github.com/thminggg"
-            target="_blank"
-            rel="noreferrer"
+            href="#contact"
+            className="contact mt-6 mb-6"
+            onClick={(e) => handleLinkClick(e, "#contact")}
           >
-            <FaGithub className="inline-block w-5 h-5" />
+            Contact
           </a>
-          <a
-            href="https://www.linkedin.com/in/patrick-tse-ca/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <FaLinkedin className="inline-block w-5 h-5" />
-          </a>
+          <div className="flex gap-3 mt-3">
+            <a
+              href="https://github.com/thminggg"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FaGithub className="inline-block w-5 h-5" />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/patrick-tse-ca/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FaLinkedin className="inline-block w-5 h-5" />
+            </a>
+          </div>
         </div>
+        <img
+          src="sitting.svg"
+          alt="propic"
+          className="hidden w-[25%] h-auto md:block"
+        />
       </div>
-      <img
-        src="it-abstract.svg"
-        alt="propic"
-        className="hidden m-auto min-w-[30%] lg:block lg:w-4/12 lg:m-0 lg:ml-auto"
-      />
     </section>
   );
 }
+
+export default Intro;

@@ -1,7 +1,13 @@
 import { useMemo } from "react";
 import "./Works.css";
 
-export default function Works({ id, dark }: { id: string; dark: boolean }) {
+interface WorksProps {
+  id: string;
+  dark: boolean;
+  className?: string;
+}
+
+function Works({ id, dark, className }: WorksProps) {
   const projects = useMemo(
     () => [
       {
@@ -71,15 +77,15 @@ export default function Works({ id, dark }: { id: string; dark: boolean }) {
   return (
     <section
       id={id}
-      className="flex flex-wrap items-center pt-20"
+      className={`flex flex-col ${className}`}
       style={{ paddingTop: "80px" }}
     >
       <h1 className="w-full text-center text-3xl section-highlight">Works</h1>
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mx-auto mt-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mx-auto mt-6">
         {projects.map(({ title, href, img }, index) => (
           <div
             key={index}
-            className={`flex flex-col rounded-lg p-3 ${
+            className={`flex flex-col rounded-lg p-3 md:p-6 ${
               !dark ? "bg-slate-100" : "bg-slate-600"
             }`}
           >
@@ -87,7 +93,11 @@ export default function Works({ id, dark }: { id: string; dark: boolean }) {
               {title}
             </p>
             <a href={href} target="__blank" className="w-full">
-              <img src={img} alt="logo" className="h-32 w-auto m-auto md:p-6" />
+              <img
+                src={img}
+                alt="logo"
+                className="h-32 w-auto m-auto p-1 lg:p-6"
+              />
             </a>
           </div>
         ))}
@@ -95,3 +105,5 @@ export default function Works({ id, dark }: { id: string; dark: boolean }) {
     </section>
   );
 }
+
+export default Works;

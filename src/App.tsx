@@ -17,12 +17,24 @@ function App() {
 
   return (
     <div className={`${dark && "dark bg-dark text-white"}`}>
-      <Nav dark={dark} setDark={setDark} />
-      <div className="pl-6 pr-6 pb-48 lg:pl-0 lg:pr-0 lg:m-auto max-w-5xl">
-        <Intro id="home" />
-        <Works id="works" dark={dark} />
-        <Skills id="skills" />
-        <Contact id="contact" />
+      <div className="max-w-screen-2xl mx-auto">
+        <Nav dark={dark} setDark={setDark} />
+        <div className="flex flex-col mx-24">
+          <Intro id="home" className="min-h-screen flex items-center pb-32" />
+          <Works
+            id="works"
+            dark={dark}
+            className="min-h-screen flex items-center justify-center pb-32"
+          />
+          <Skills
+            id="skills"
+            className="min-h-screen flex items-center justify-center pb-32"
+          />
+          <Contact
+            id="contact"
+            className="min-h-screen flex items-center justify-center pb-32"
+          />
+        </div>
       </div>
     </div>
   );

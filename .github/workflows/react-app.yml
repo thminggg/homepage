@@ -67,7 +67,7 @@ jobs:
       - name: Build
         run: |
           npx env-cmd -f .env.github ${{ steps.detect-package-manager.outputs.runner }} run build
-          npx update-browserslist-db@latest
+          yarn add update-browserslist-db
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

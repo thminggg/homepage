@@ -2,13 +2,14 @@ import "./Contact.css";
 import { MdOutlineMarkEmailUnread } from "react-icons/md";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
-export default function Contact({ id }: { id: string }) {
+interface ContactProps {
+  id: string;
+  className?: string;
+}
+
+function Contact({ id, className }: ContactProps) {
   return (
-    <section
-      id={id}
-      className="flex flex-wrap items-center pt-20"
-      style={{ paddingTop: "80px", paddingBottom: "100px" }}
-    >
+    <section id={id} className={`flex flex-col ${className}`}>
       <h1 className="w-full text-center mb-6 text-3xl section-highlight">
         Contact
       </h1>
@@ -45,3 +46,5 @@ export default function Contact({ id }: { id: string }) {
     </section>
   );
 }
+
+export default Contact;
