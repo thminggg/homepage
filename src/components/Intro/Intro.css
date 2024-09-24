@@ -1,12 +1,45 @@
+.bg-container {
+  position: relative;
+  margin-left: -6rem;
+  margin-right: -6rem;
+}
+
+.bg {
+  position: absolute;
+  height: 728px; /* Adjusted to match the height of the ribbon */
+  width: 100%;
+  background: url("/public/ribbon.svg") repeat-x;
+  animation: slide 20s linear infinite;
+}
+
+@keyframes slide {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: 1177px 0; /* Adjusted to match the width of the ribbon */
+  }
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  margin-left: 6rem;
+  margin-right: 6rem;
+}
+
 .slogan {
   font-size: 3.625rem;
   font-style: normal;
   font-weight: 700;
   line-height: 5.625rem;
   letter-spacing: 0.0725rem;
+}
 
-  @media (max-width: 1280px) {
-    font-size: 2.625em;
+@media (max-width: 1280px) {
+  .slogan {
+    font-size: 2.625rem;
     line-height: 3.625rem;
   }
 }
@@ -20,20 +53,12 @@
   letter-spacing: 0.02rem;
   background: #2c64ec;
   border-radius: 5px;
-  padding: 1rem 2rem 1rem 2rem;
+  padding: 1rem 2rem;
   opacity: 85%;
+  display: inline-block;
+  border-radius: 0.5rem;
 }
 
 .highlight {
   color: #2c64eb;
-}
-
-.contact {
-  display: inline-block;
-  background-color: var(--first-color);
-  color: #fff;
-  padding: 0.75rem 2.5rem;
-  font-weight: 700;
-  border-radius: 0.5rem;
-  transition: 0.3s;
 }
