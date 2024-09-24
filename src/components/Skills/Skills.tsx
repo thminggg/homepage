@@ -35,29 +35,40 @@ function Skills({ id, className }: SkillsProps) {
       <div className="w-full flex flex-col gap-3 mt-3 mb-3">
         <div className="stacks grid grid-rows-4 gap-3">
           <div className="flex flex-wrap justify-evenly items-center gap-3">
-            <SiAmazonaws className="aws" />
-            <SiMicrosoftazure className="w-9 h-auto azure" />
+            <SiAmazonaws className="aws" title="Amazon Web Services" />
+            <SiMicrosoftazure
+              className="w-9 h-auto azure"
+              title="Microsoft Azure"
+            />
           </div>
           <div className="flex flex-wrap justify-evenly items-center gap-3">
-            <BiLogoTypescript className="ts" />
-            <BiLogoJavascript className="js" />
-            <BiLogoReact className="react" />
-            <SiTailwindcss className="tailwind" />
-            <BiLogoGraphql className="graphql" />
-            <BiLogoNodejs className="nodejs" />
-            <img src="python.svg" alt="python" />
+            <BiLogoTypescript className="ts" title="TypeScript" />
+            <BiLogoJavascript className="js" title="JavaScript" />
+            <BiLogoReact className="react" title="React" />
+            <SiTailwindcss className="tailwind" title="Tailwind CSS" />
+            <BiLogoGraphql className="graphql" title="GraphQL" />
+            <BiLogoNodejs className="nodejs" title="Node.js" />
+            <img src="python.svg" alt="python" title="Python" />
           </div>
           <div className="flex flex-wrap justify-evenly items-center gap-3">
-            <SiAmazondynamodb className="dynamodb" />
-            <BiLogoPostgresql className="postgres" />
-            <SiApachekafka />
-            <SiDatabricks className="databricks" />
+            <SiAmazondynamodb className="dynamodb" title="Amazon DynamoDB" />
+            <BiLogoPostgresql className="postgres" title="PostgreSQL" />
+            <SiApachekafka className="kafka" title="Apache Kafka" />
+            <SiDatabricks className="databricks" title="Databricks" />
           </div>
           <div className="flex flex-wrap justify-evenly items-center gap-3">
-            <SiKubernetes className="k8s" />
-            <SiDocker className="docker" />
-            <img src="jenkins.svg" className="w-12 h-auto" alt="jenkins" />
-            <SiGithubactions className="github-actions" />
+            <SiKubernetes className="k8s" title="Kubernetes" />
+            <SiDocker className="docker" title="Docker" />
+            <img
+              src="jenkins.svg"
+              className="w-12 h-auto"
+              alt="jenkins"
+              title="Jenkins"
+            />
+            <SiGithubactions
+              className="github-actions"
+              title="GitHub Actions"
+            />
           </div>
         </div>
       </div>
