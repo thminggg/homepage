@@ -39,23 +39,25 @@ const Drawer = ({
   return (
     <div className="w-full relative md:hidden">
       <div className="absolute top-3 right-0 w-full bg-white dark:bg-dark">
-        <div className="flex flex-col gap-1 flex-wrap justify-end">
-          {links.map((link, index) => (
-            <a
-              key={index}
-              href={link.href}
-              className={`nav-link hidden ml-auto responsive-menu xl:inline-block ${
-                openMenu && "open"
-              }`}
-              onClick={(e) => {
-                handleLinkClick(e, link.href);
-                setOpenMenu(!openMenu);
-              }}
-            >
-              {link.name}
-            </a>
-          ))}
-        </div>
+        {openMenu && (
+          <div className="flex flex-col gap-1 flex-wrap justify-end px-6 pb-6">
+            {links.map((link, index) => (
+              <a
+                key={index}
+                href={link.href}
+                className={`nav-link hidden ml-auto responsive-menu xl:inline-block ${
+                  openMenu && "open"
+                }`}
+                onClick={(e) => {
+                  handleLinkClick(e, link.href);
+                  setOpenMenu(!openMenu);
+                }}
+              >
+                {link.name}
+              </a>
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );
@@ -73,12 +75,12 @@ export default function Nav({
   return (
     <div
       id={navId}
-      className="flex flex-wrap py-6 px-6 md:px-24 justify-between items-center sticky top-0 bg-white dark:bg-dark z-10"
+      className="flex flex-wrap py-6 justify-between items-center sticky top-0 bg-white dark:bg-dark z-10"
     >
-      <a href="/homepage" className="name">
+      <a href="/homepage" className="name pl-6 md:pl-24">
         Patrick
       </a>
-      <div className="flex flex-wrap gap-8 items-center">
+      <div className="flex flex-wrap gap-8 items-center pr-6 md:pr-24">
         {links.map((link, index) => (
           <a
             key={index}
