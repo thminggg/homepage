@@ -4,7 +4,7 @@ https://thminggg.github.io/homepage
 
 ## Personal Homepage
 
-This repository includes all the projects I have been working on
+This repository includes all the projects and technologies I have been working on
 
 ## Tech Stack
 
