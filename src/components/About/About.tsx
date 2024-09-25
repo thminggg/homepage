@@ -1,43 +1,48 @@
 import "./About.css";
 
-export default function About({ id }: { id: string }) {
+export default function About({
+  id,
+  className,
+}: {
+  id: string;
+  className?: string;
+}) {
   return (
-    <section
-      id={id}
-      className="flex flex-wrap items-center pt-20"
-      style={{ minHeight: "500px", paddingTop: "80px" }}
-    >
-      <h1 className="w-full text-center text-3xl section-highlight">About</h1>
-      <div className="w-full md:w-6/12">
-        <img
-          src="sticker.webp"
-          alt="propic"
-          className="w-6/12 h-auto mx-auto"
-        />
-      </div>
-      <div className="w-full md:w-6/12">
-        <h2 className="text-left text-xl mb-6 title">
-          Vancouver, Canada
+    <section id={id} className={className} style={{ paddingTop: "80px" }}>
+      <div className="flex flex-wrap items-center gap-6">
+        <h1 className="w-full text-center text-3xl section-highlight">About</h1>
+        <div className="hidden md:block md:flex-1">
           <img
-            src="ass.png"
-            alt="solution architect"
-            className="inline-block w-2/12 pl-2"
+            src="sitting.svg"
+            alt="sitting"
+            className="flex-1 h-auto mx-auto"
+            style={{ transform: "scaleX(-1)" }}
           />
-        </h2>
-        <p className="text-left italic">
-          Software Engineer specialize in Cloud services, FinTech, and
-          Innovation, utilizing ReactJS and NodeJS.
-          <br />
-          <br />
-          Presently engaged as a Software Engineer in Test within the eCommerce
-          industry, responsible for developing sophisticated automated testing
-          frameworks.
-          <br />
-          <br />
-          Before that, working as a Lead Software Engineer at a consulting firm
-          to provide tailor-made IT solutions for clients in the finance and
-          insurance sectors.
-        </p>
+        </div>
+        <div className="flex-1">
+          <h2 className="text-left text-xl mb-6 title">
+            Vancouver, Canada
+            <img
+              src="ass.png"
+              alt="solution architect"
+              className="inline-block w-20 pl-2"
+            />
+          </h2>
+          <p className="text-left">
+            I am an AWS-certified Software Engineer with 7+ years of experience
+            specializing in Web, API and automation.
+            <br />
+            <br />
+            My expertise mainly lies in leveraging React and Node.js to deliver
+            microservices-based IT solutions for leading companies such as
+            Lululemon, IBM, and Vaisala Canada.
+            <br />
+            <br />
+            Presently engaged as a Tech Engineer within the eCommerce industry,
+            responsible for developing ReactJS components and automated testing
+            frameworks.
+          </p>
+        </div>
       </div>
     </section>
   );
