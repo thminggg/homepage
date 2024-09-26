@@ -20,21 +20,27 @@ function App() {
     <div className={`${dark && "dark bg-dark text-white"}`}>
       <div className="max-w-screen-2xl mx-auto">
         <Nav dark={dark} setDark={setDark} />
-        <div className="flex flex-col px-6 md:px-24">
-          <Intro id="home" className="min-h-screen flex items-center pb-32" />
-          <About id="about" className="min-h-screen flex items-center pb-32" />
+        <div className="flex flex-col">
+          <Intro
+            id="home"
+            className="min-h-screen flex items-center px-6 pb-32"
+          />
+          <About
+            id="about"
+            className="min-h-screen flex items-center px-6 pb-32"
+          />
           <Works
             id="works"
             dark={dark}
-            className="min-h-screen flex items-center justify-center pb-32"
+            className="min-h-screen flex items-center justify-center px-6 pb-32"
           />
           <Skills
             id="skills"
-            className="min-h-screen flex items-center justify-center pb-32"
+            className="min-h-screen flex items-center justify-center px-6 pb-32"
           />
           <Contact
             id="contact"
-            className="min-h-screen flex items-center justify-center pb-32"
+            className="min-h-screen flex items-center justify-center px-6 pb-32"
           />
         </div>
       </div>

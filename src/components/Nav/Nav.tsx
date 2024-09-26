@@ -75,9 +75,9 @@ export default function Nav({
   return (
     <div
       id={navId}
-      className="flex flex-wrap py-6 justify-between items-center sticky top-0 bg-white dark:bg-dark z-10"
+      className="flex flex-wrap py-6 justify-between items-center sticky top-0 bg-white dark:bg-dark z-20"
     >
-      <a href="/homepage" className="name pl-6 md:pl-24">
+      <a href="/homepage" className="home name pl-6 md:pl-24">
         Patrick
       </a>
       <div className="flex flex-wrap gap-8 items-center pr-6 md:pr-24">

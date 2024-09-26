@@ -38,3 +38,7 @@
   opacity: 1;
   max-height: 200px; /* Adjust as needed */
 }
+
+.home {
+  color: var(--first-color);
+}

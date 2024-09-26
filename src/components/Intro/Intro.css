@@ -1,46 +1,13 @@
-.bg-container {
-  position: relative;
-  margin-left: -6rem;
-  margin-right: -6rem;
-}
-
-.bg {
-  position: absolute;
-  height: 728px; /* Adjusted to match the height of the ribbon */
-  width: 100%;
-  background: url("/public/ribbon.svg") repeat-x;
-  animation: slide 20s linear infinite;
-}
-
-@keyframes slide {
-  from {
-    background-position: 0 0;
-  }
-
-  to {
-    background-position: 1177px 0; /* Adjusted to match the width of the ribbon */
-  }
-}
-
-.content {
-  position: relative;
-  z-index: 1;
-  margin-left: 6rem;
-  margin-right: 6rem;
-}
-
 .slogan {
-  font-size: 3.625rem;
   font-style: normal;
   font-weight: 700;
   line-height: 5.625rem;
   letter-spacing: 0.0725rem;
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 768px) {
   .slogan {
-    font-size: 2.625rem;
-    line-height: 3.625rem;
+    line-height: 3rem;
   }
 }
 

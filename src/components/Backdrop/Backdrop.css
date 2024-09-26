@@ -1,0 +1,23 @@
+.bg-container {
+  position: relative;
+}
+
+.bg {
+  position: absolute;
+  height: 728px;
+  /* Adjusted to match the height of the ribbon */
+  width: 100%;
+  background: url("/public/ribbon.svg") repeat-x;
+  animation: slide 20s linear infinite;
+}
+
+@keyframes slide {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: 1177px 0;
+    /* Adjusted to match the width of the ribbon */
+  }
+}
