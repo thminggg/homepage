@@ -7,6 +7,7 @@ import Nav from "./components/Nav/Nav";
 import Skills from "./components/Skills/Skills";
 import Works from "./components/Works/Works";
 import { trackResize, trackScroll } from "./helpers/scrollTrack";
+import { FirebaseProvider } from "./providers/firebaseProvider";
 
 function App() {
   const [dark, setDark] = useState(false);
@@ -17,34 +18,36 @@ function App() {
   }, []);
 
   return (
-    <div className={`${dark && "dark bg-dark text-white"}`}>
-      <div className="max-w-screen-2xl mx-auto">
-        <Nav dark={dark} setDark={setDark} />
-        <div className="flex flex-col">
-          <Intro
-            id="home"
-            className="min-h-screen flex items-center px-6 pb-32"
-          />
-          <About
-            id="about"
-            className="min-h-screen flex items-center px-6 pb-32"
-          />
-          <Works
-            id="works"
-            dark={dark}
-            className="min-h-screen flex items-center justify-center px-6 pb-32"
-          />
-          <Skills
-            id="skills"
-            className="min-h-screen flex items-center justify-center px-6 pb-32"
-          />
-          <Contact
-            id="contact"
-            className="min-h-screen flex items-center justify-center px-6 pb-32"
-          />
+    <FirebaseProvider>
+      <div className={`${dark && "dark bg-dark text-white"}`}>
+        <div className="max-w-screen-2xl mx-auto">
+          <Nav dark={dark} setDark={setDark} />
+          <div className="flex flex-col">
+            <Intro
+              id="home"
+              className="min-h-screen flex items-center px-6 pb-32"
+            />
+            <About
+              id="about"
+              className="min-h-screen flex items-center px-6 pb-32"
+            />
+            <Works
+              id="works"
+              dark={dark}
+              className="min-h-screen flex items-center justify-center px-6 pb-32"
+            />
+            <Skills
+              id="skills"
+              className="min-h-screen flex items-center justify-center px-6 pb-32"
+            />
+            <Contact
+              id="contact"
+              className="min-h-screen flex items-center justify-center px-6 pb-32"
+            />
+          </div>
         </div>
       </div>
-    </div>
+    </FirebaseProvider>
   );
 }
 
