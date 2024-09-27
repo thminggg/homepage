@@ -1,0 +1,2 @@
+chmod +x script/add-git-action-secrets.sh
+./script/add-git-action-secrets.sh

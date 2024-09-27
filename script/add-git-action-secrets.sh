@@ -13,7 +13,7 @@ if [ -z "$GITHUB_TOKEN" ]; then
     exit 1
 fi
 
-# Load .env.firebase file and extract GITHUB_USER and GITHUB_REPO_NAME
+# Load .env.firebase file and upload secrets to GitHub
 if [ -f .env.firebase ]; then
   gh secret set -f .env.firebase
 else
