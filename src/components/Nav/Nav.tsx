@@ -75,7 +75,7 @@ export default function Nav({
   return (
     <div
       id={navId}
-      className="flex flex-wrap py-6 justify-between items-center sticky top-0 bg-white dark:bg-dark z-20"
+      className="flex flex-wrap py-6 justify-between items-center sticky top-0 bg-white dark:bg-dark z-20 transition duration-500"
     >
       <a href="/homepage" className="home name pl-6 md:pl-24">
         Patrick

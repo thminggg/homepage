@@ -19,7 +19,11 @@ function App() {
 
   return (
     <FirebaseProvider>
-      <div className={`${dark && "dark bg-dark text-white"}`}>
+      <div
+        className={`${
+          dark && "dark bg-dark text-white"
+        } transition duration-500`}
+      >
         <div className="max-w-screen-2xl mx-auto">
           <Nav dark={dark} setDark={setDark} />
           <div className="flex flex-col">

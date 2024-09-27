@@ -59,13 +59,14 @@ function Works({ id, dark, className }: WorksProps) {
       style={{ paddingTop: "80px" }}
     >
       <h1 className="w-full text-center text-3xl section-highlight">Works</h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mx-auto mt-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mx-auto mt-6">
         {projects.map(({ title, href, img }, index) => (
           <div
             key={index}
-            className={`flex flex-col rounded-lg p-3 md:p-6 ${
-              !dark ? "bg-slate-100" : "bg-slate-600"
-            }`}
+            className={`flex flex-col rounded-lg p-3 md:p-6 transform 
+                                hover:scale-110 transition duration-500 ${
+                                  !dark ? "bg-slate-100" : "bg-slate-600"
+                                }`}
           >
             <span className="text-center font-semibold md:text-lg lg:text-xl">
               {title}
