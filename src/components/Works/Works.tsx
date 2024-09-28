@@ -63,10 +63,9 @@ function Works({ id, dark, className }: WorksProps) {
         {projects.map(({ title, href, img }, index) => (
           <div
             key={index}
-            className={`flex flex-col rounded-lg p-3 md:p-6 transform 
-                                hover:scale-110 transition duration-500 ${
-                                  !dark ? "bg-slate-100" : "bg-slate-600"
-                                }`}
+            className={`flex flex-col rounded-lg p-3 md:p-6 bg-transition hover:transition-all hover:duration-500 hover:scale-110 ${
+              !dark ? "bg-slate-100" : "bg-slate-600"
+            }`}
           >
             <span className="text-center font-semibold md:text-lg lg:text-xl">
               {title}
