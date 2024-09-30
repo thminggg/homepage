@@ -1,55 +1,71 @@
 import { useMemo } from "react";
 import "./Works.css";
+import WorkCard from "../WorkCard/WorkCard";
 
 interface WorksProps {
   id: string;
-  dark: boolean;
   className?: string;
 }
 
-function Works({ id, dark, className }: WorksProps) {
+function Works({ id, className }: WorksProps) {
   const projects = useMemo(
     () => [
       {
-        title: <p className="overflow-hidden whitespace-nowrap">React App</p>,
+        title: "lululemon",
+        headline: "React Web App",
+        description:
+          "Customized A/B react components on the flagship Web App and Mobile App",
+        bgColor: "#AB4355",
         href: "https://shop.lululemon.com",
-        img: !dark ? "lulu-logo.svg" : "lulu-logo-white.svg",
+        img: "lulu-logo-circle.svg",
       },
       {
-        title: <p className="overflow-hidden whitespace-nowrap">AI Chatbot</p>,
-        href: "https://www.hangseng.com/en-hk/business/banking-digitally/online-services-beri/",
-        img: !dark ? "hs-logo.svg" : "hs-logo-white.svg",
-      },
-      {
-        title: (
-          <p className="overflow-hidden whitespace-nowrap">
-            AI & Microservices
-          </p>
-        ),
-        href: "https://www.aia.com.hk/en/about-aia/about-us/media-centre/press-releases/2023/aia-press-release-20231026",
-        img: "aia-logo.svg",
-      },
-      {
-        title: <p className="overflow-hidden whitespace-nowrap">Automation </p>,
+        title: "Vaisala",
+        headline: "Automation",
+        description:
+          "Test automation framework with multi-threading data workers",
+        bgColor: "#4185AB",
         href: "https://www.vaisala.com/en",
-        img: !dark ? "v-logo.svg" : "v-logo-white.svg",
+        img: "v-circle.svg",
       },
       {
-        title: (
-          <p className="overflow-hidden whitespace-nowrap">Fullstack Web App</p>
-        ),
+        title: "Hang Seng Bank",
+        headline: "AI Chatbot",
+        description:
+          "AI-powered WhatsApp chatbot intergraing with commercial banking APIs",
+        bgColor: "#41AB5F",
+        href: "https://www.hangseng.com/en-hk/business/banking-digitally/online-services-beri/",
+        img: "hs-logo-circle.svg",
+      },
+      {
+        title: "uFinance",
+        headline: "Fullstack Web App",
+        description:
+          "Fullstack Web App for a FinTech startup, transitioning from PHP to ReactJS with Redux",
+        bgColor: "#4237AB",
         href: "https://www.ufinancehk.co/",
-        img: "uf-logo.svg",
+        img: "uf-logo-circle.svg",
       },
       {
-        title: (
-          <p className="overflow-hidden whitespace-nowrap">Fullstack Web App</p>
-        ),
+        title: "AIA",
+        headline: "AI Recommendation",
+        description:
+          "An award-winning AI Learning Recommendation Engine (ALRE) serving for insurance agents",
+        bgColor: "#3595AB",
+        href: "https://www.aia.com.hk/en/about-aia/about-us/media-centre/press-releases/2023/aia-press-release-20231026",
+        img: "aia-logo-circle.svg",
+      },
+      {
+        title: "Sportsync",
+        headline: "Fullstack Web App",
+        description:
+          "Fullstack Web App for a sports tech startup, serving for sports clubs, coaches and atheletes around the world",
+        bgColor: "#F47823",
         href: "https://www.sportsync.com/",
-        img: "ss-logo.svg",
+        img: "ss-logo-circle.svg",
       },
     ],
-    [dark]
+    []
   );
 
   return (
@@ -59,26 +75,25 @@ function Works({ id, dark, className }: WorksProps) {
       style={{ paddingTop: "80px" }}
     >
       <h1 className="w-full text-center text-3xl section-highlight">Works</h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mx-auto mt-6">
-        {projects.map(({ title, href, img }, index) => (
-          <div
-            key={index}
-            className={`flex flex-col rounded-lg p-3 md:p-6 bg-transition hover:transition-all hover:duration-500 hover:scale-110 ${
-              !dark ? "bg-slate-100" : "bg-slate-600"
-            }`}
-          >
-            <span className="text-center font-semibold md:text-lg lg:text-xl">
-              {title}
-            </span>
-            <a href={href} target="__blank" className="w-full">
-              <img
-                src={img}
-                alt="logo"
-                className="h-32 w-auto m-auto p-1 lg:p-6"
+      <div className="bg-slate-300 dark:bg-slate-700 p-6 rounded-lg mt-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mx-auto">
+          {projects.map(
+            ({ title, headline, description, href, img, bgColor }, index) => (
+              <WorkCard
+                key={index}
+                title={title}
+                headline={headline}
+                description={description}
+                href={href}
+                img={img}
+                bgColor={bgColor}
+                onClick={() => {
+                  window.open(href, "_blank");
+                }}
               />
-            </a>
-          </div>
-        ))}
+            )
+          )}
+        </div>
       </div>
     </section>
   );

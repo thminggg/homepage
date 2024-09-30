@@ -35,7 +35,7 @@ export default function About({
             <br />
             My expertise mainly lies in leveraging React and Node.js to deliver
             microservices-based IT solutions for leading companies such as
-            Lululemon, IBM, and Vaisala Canada.
+            lululemon, IBM, and Vaisala Canada.
             <br />
             <br />
             Presently engaged as a Tech Engineer within the eCommerce industry,

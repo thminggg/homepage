@@ -33,7 +33,6 @@ function App() {
             />
             <Works
               id="works"
-              dark={dark}
               className="min-h-screen flex items-center justify-center px-6 pb-32"
             />
             <Skills
