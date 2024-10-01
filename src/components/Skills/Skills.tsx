@@ -32,7 +32,7 @@ function Skills({ id, className }: SkillsProps) {
       style={{ paddingTop: "80px" }}
     >
       <h1 className="w-full text-center text-3xl section-highlight">Skills</h1>
-      <div className="w-full flex flex-col gap-3 mt-3 mb-3">
+      <div className="w-full flex flex-col gap-3 mt-3 mb-3 max-w-screen-md">
         <div className="stacks grid grid-rows-4 gap-3">
           <div className="flex flex-wrap justify-evenly items-center gap-3">
             <SiAmazonaws className="aws" title="Amazon Web Services" />
