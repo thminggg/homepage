@@ -1,5 +1,10 @@
 const TRACK_WIDTH = Number(process.env.REACT_APP_SCROLL_TRACK_WIDTH);
 
+/**
+ * Scroll to a section
+ * @param e - Mouse Event
+ * @param id - ID of the section
+ */
 export const handleLinkClick = (
   e: React.MouseEvent<HTMLAnchorElement>,
   id: string
@@ -19,6 +24,12 @@ export const handleLinkClick = (
   section?.scrollIntoView({ behavior: "smooth" });
 };
 
+/**
+ * Update Active Section
+ * @param sections - NodeList of sections
+ * @param navLinks - NodeList of nav links
+ * @returns - void
+ */
 export const updateActiveSection = (
   sections: NodeListOf<HTMLElement>,
   navLinks: NodeListOf<Element>
@@ -28,6 +39,10 @@ export const updateActiveSection = (
 
   let currentSectionIndex = -1;
   sections.forEach((section, index) => {
+    // This code snippet iterates through each section and determines the current active section based on its position relative to the viewport.
+    // It calculates the top position of each section using getBoundingClientRect().top.
+    // If the section's top position is less than one-third of the window's height, it updates the currentSectionIndex to the index of that section.
+    // This ensures that the section currently in view (or closest to the top of the viewport) is considered the active section.
     const sectionTop = section.getBoundingClientRect().top;
     if (sectionTop - window.innerHeight / 3 < 0) {
       currentSectionIndex = index;
